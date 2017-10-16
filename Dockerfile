@@ -17,6 +17,12 @@ ENV CXXFLAGS "-O3"
 RUN apk update && apk add --no-cache --virtual .build-deps $BUILD_DEPS \
     && apk add --no-cache git libstdc++
 
+# Install XDebug
+RUN pecl install xdebug \
+    && rm -rf /tmp/pear \
+    && docker-php-ext-enable xdebug \
+    && php -m | grep xdebug
+
 # Install composer
 WORKDIR /tmp
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
