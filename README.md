@@ -4,3 +4,4 @@ Based on official php:7.1.9-alpine image. Extras:
 - `igbinary` extension
 - `cld2` library and PHP extension
 - `xdebug` extension
+- `gender` extension

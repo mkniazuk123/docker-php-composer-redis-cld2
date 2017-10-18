@@ -23,6 +23,12 @@ RUN pecl install xdebug \
     && docker-php-ext-enable xdebug \
     && php -m | grep xdebug
 
+# Install igbinary
+RUN pecl install gender \
+    && rm -rf /tmp/pear \
+    && docker-php-ext-enable gender \
+    && php -m | grep gender
+
 # Install composer
 WORKDIR /tmp
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
