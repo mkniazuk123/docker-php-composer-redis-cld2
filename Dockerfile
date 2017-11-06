@@ -15,7 +15,7 @@ ENV CPPFLAGS "-O3"
 ENV CXXFLAGS "-O3"
 
 RUN apk update && apk add --no-cache --virtual .build-deps $BUILD_DEPS \
-    && apk add --no-cache git libstdc++
+    && apk add --no-cache git mariadb-client libstdc++
 
 # Install XDebug
 RUN pecl install xdebug \
