@@ -6,3 +6,4 @@ Based on official php:7.1.9-alpine image. Extras:
 - `xdebug` extension
 - `gender` extension
 - MariaDB client
+- Python 2.7
