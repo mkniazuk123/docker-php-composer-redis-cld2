@@ -17,6 +17,9 @@ ENV CXXFLAGS "-O3"
 RUN apk update && apk add --no-cache --virtual .build-deps $BUILD_DEPS \
     && apk add --no-cache git mariadb-client python libstdc++
 
+# Install PDO MySQL driver
+RUN docker-php-ext-install pdo_mysql
+
 # Install XDebug
 RUN pecl install xdebug \
     && rm -rf /tmp/pear \

@@ -7,3 +7,4 @@ Based on official php:7.1.9-alpine image. Extras:
 - `gender` extension
 - MariaDB client
 - Python 2.7
+- MySQL driver for PDO installed via `docker-php-ext-install` 
