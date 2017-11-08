@@ -10,9 +10,6 @@ ENV BUILD_DEPS \
                 openssl-dev
 ENV REDIS_VERSION 3.1.3
 ENV IGBINARY_VERSION 2.0.4
-ENV CFLAGS "-O3"
-ENV CPPFLAGS "-O3"
-ENV CXXFLAGS "-O3"
 
 RUN apk update && apk add --no-cache --virtual .build-deps $BUILD_DEPS \
     && apk add --no-cache git mariadb-client python libstdc++
